@@ -7,7 +7,10 @@ ruby '2.7.0'
 gem 'devise'
 
 # Enable haml instead of ERB
-gem "haml-rails", "~> 2.0"
+gem 'haml-rails', '~> 2.0'
+
+gem 'react-rails'
+gem 'webpacker'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.2'

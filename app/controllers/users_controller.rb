@@ -1,4 +1,4 @@
 class UsersController < ApplicationController
-  def home
+  def react_root
   end
 end

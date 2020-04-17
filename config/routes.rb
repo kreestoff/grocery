@@ -8,5 +8,5 @@ Rails.application.routes.draw do
     get "sign_out", to: "devise/sessions#destroy"
   end
 
-  root to: 'users#home'
+  root to: 'users#react_root'
 end
