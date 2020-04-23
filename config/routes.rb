@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   end
 
   root to: 'users#react_root'
+
+  get 'users/:id/show', to: 'users#show'
 end
