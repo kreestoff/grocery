@@ -1,2 +1,7 @@
 object @user
-attributes :id, :email, :grocery_lists, :items
+attributes :id, :email
+
+child :grocery_lists do
+  attributes :id, :created_at, :updated_at
+  node(:item_count) {|list| list.items.count}
+end

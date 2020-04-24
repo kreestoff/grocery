@@ -11,4 +11,6 @@ Rails.application.routes.draw do
   root to: 'users#react_root'
 
   get 'users/:id/show', to: 'users#show'
+
+  get 'grocery_lists/:id/show', to: 'grocery_lists#show'
 end
