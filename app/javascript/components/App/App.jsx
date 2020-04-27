@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react'
 
 import Nav from '../Nav';
+import Placeholder from '../Placeholder';
 
 export default class App extends PureComponent {
   render() {
@@ -8,6 +9,7 @@ export default class App extends PureComponent {
       <div>
         <div>I'm the App</div>
         <Nav/>
+        <Placeholder/>
       </div>
     )
   }
