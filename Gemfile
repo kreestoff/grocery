@@ -14,6 +14,8 @@ gem 'webpacker'
 
 gem 'rabl'
 
+gem 'faker'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.2'
 # Use postgresql as the database for Active Record
