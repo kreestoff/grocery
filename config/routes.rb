@@ -8,6 +8,13 @@ Rails.application.routes.draw do
     get "sign_out", to: "devise/sessions#destroy"
   end
 
+  # Forward all requests to UsersController#react_root but requests
+  # must be non-Ajax (!req.xhr?) and HTML Mime type (req.format.html?).
+  # This does not include the root ('/') path.
+  get '*page', to: 'users#react_root', constraints: ->(req) do
+    !req.xhr? && req.format.html?
+  end
+
   root to: 'users#react_root'
 
   get 'users/show', to: 'users#show'
