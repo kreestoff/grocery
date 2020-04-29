@@ -2,18 +2,18 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 
 export default class GroceryLists extends PureComponent {
-  static propTypes = {
-    groceryLists: PropTypes.array
+  // static propTypes = {
+  //   groceryLists: PropTypes.array
+  // }
+  state = {
+    groceryLists: []
   }
-  // state = {
-  //   groceryLists: []
-  // }
-  //
-  // componentDidMount() {
-  //   fetch('http://localhost:3000/users/show')
-  //   .then(res => res.json())
-  //   .then(data => this.setState({groceryLists: data.grocery_lists}))
-  // }
+
+  componentDidMount() {
+    fetch('http://localhost:3000/users/show')
+    .then(res => res.json())
+    .then(data => this.setState({groceryLists: data.grocery_lists}))
+  }
 
   renderGroceryList = list =>
     <div key={ list.id }>
@@ -27,7 +27,7 @@ export default class GroceryLists extends PureComponent {
     return (
       <div>
        {
-         this.props.groceryLists.map(list =>
+         this.state.groceryLists.map(list =>
            this.renderGroceryList(list)
          )
        }
